@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
@@ -21,9 +22,10 @@ def predict():
         outputs = model(**inputs)
         prediction = torch.argmax(outputs.logits, dim=1).item()
     # Updated label mapping based on model config
-    label_map = {0: "Fake News", 1: "Real News"}  # Swap if needed
+    label_map = {0: "Real News", 1: "Fake News"}  # Swap if needed
     label = label_map[prediction]
     return render_template("index.html", prediction=label)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

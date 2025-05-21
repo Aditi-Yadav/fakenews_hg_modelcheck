@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Fake News Detection</h1>
+        <form action="/predict" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="textInput">Enter text to analyze:</label>
+                <textarea class="form-control" id="textInput" name="textInput" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Check for Fake News</button>
+        </form>
+        {% if prediction is not none %}
+            <div class="mt-4">
+                <h3>Result:</h3>
+                <p>{{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

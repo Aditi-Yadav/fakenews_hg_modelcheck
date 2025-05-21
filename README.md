@@ -1,6 +1,6 @@
 # Fake News Detection Website
 
-This project is a web application that detects fake news using a machine learning model. The application is built with Flask and utilizes the Hugging Face model `jy46604790/Fake-News-Bert-Detect` for text classification.
+This project is a web application that detects fake news using a machine learning model. The application is built with Flask and utilizes the Hugging Face model `jy46604790/Fake-News-Bert-Detect` for text classification but it didnot give expected results, next we tried 'Pulk17/Fake-News-Detection' it works well.
 
 ## Project Structure
 
@@ -21,17 +21,20 @@ fake-news-detection-website
 ## Setup Instructions
 
 1. **Clone the repository:**
+
    ```
    git clone <repository-url>
    cd fake-news-detection-website
    ```
 
 2. **Create a virtual environment:**
+
    ```
    python -m venv venv
    ```
 
 3. **Activate the virtual environment:**
+
    - On Windows:
      ```
      venv\Scripts\activate
@@ -49,11 +52,13 @@ fake-news-detection-website
 ## Usage
 
 1. **Run the application:**
+
    ```
    python app/main.py
    ```
 
 2. **Open your web browser and go to:**
+
    ```
    http://127.0.0.1:5000
    ```

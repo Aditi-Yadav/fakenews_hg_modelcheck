@@ -5,7 +5,7 @@ import torch
 app = Flask(__name__)
 
 # Load model and tokenizer once at startup
-MODEL_NAME = "jy46604790/Fake-News-Bert-Detect"
+MODEL_NAME = "Pulk17/Fake-News-Detection"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 

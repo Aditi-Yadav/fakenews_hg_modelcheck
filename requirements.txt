@@ -1,0 +1,8 @@
+Flask
+transformers
+torch
+numpy
+pandas
+requests
+pillow
+pytesseract
